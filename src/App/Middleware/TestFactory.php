@@ -21,7 +21,8 @@ class TestFactory
     public function __invoke(ContainerInterface $container)
     {
         return new TestMiddleware(
-            (new Logger('my-app'))->pushHandler(new StreamHandler('./data/logs/debug.log', Logger::DEBUG))
+            (new Logger('my-app'))
+                ->pushHandler(new StreamHandler('./data/logs/debug.log', Logger::DEBUG))
         );
     }
 }
