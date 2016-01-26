@@ -37,10 +37,8 @@ class TestMiddleware
         ResponseInterface $response,
         callable $next = null
     ) {
-        $this->logger->addWarning('Foo', $request->getAttributes());
-
         if ($next) {
-            $this->logger->addError('Bar', ['foo' => 'bar']);
+            $this->logger->addError('Bar', ['next' => true]);
             $response = $next($request, $response);
         }
         return $response;
