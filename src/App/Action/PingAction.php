@@ -8,8 +8,14 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class PingAction
 {
-    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next = null)
-    {
-        return new JsonResponse(['ack' => time()]);
+    public function __invoke(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        callable $next = null
+    ) {
+        return new JsonResponse([
+            'ack' => time(),
+            'hoge' => 'huga',
+        ]);
     }
 }
