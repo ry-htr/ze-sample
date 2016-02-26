@@ -56,7 +56,6 @@ class HomePageAction
                 'docsUrl' => 'zend-expressive.readthedocs.org',
             ]);
         }
-
         return new HtmlResponse($this->template->render('app::home-page', $data));
     }
 }
