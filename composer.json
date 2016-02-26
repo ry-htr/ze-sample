@@ -55,7 +55,7 @@
         "cs-fix": "phpcbf",
         "serve": "php -S 192.168.75.138:8001 -t public/ public/index.php",
         "test": "phpunit",
-        "doc": "php bin/apigen.phar generate --source src --destination doc/api",
+        "doc": "php bin/apigen.phar generate --source src --destination doc/api --template-theme bootstrap",
         "metrics": "php bin/phpmetrics.phar --report-html=doc/metrics.html src"
     }
 }
